@@ -52,7 +52,7 @@ export const LearnPage: React.FC = () => {
   const [availableLabels, setAvailableLabels] = useState(
     randomizeArray(item?.labels.map((l) => ({ id: l.id, text: l.text })) || [])
   );
-  const [draggedLabelId, setDraggedLabelId] = useState<string | null>(null);
+  const [_draggedLabelId, _setDraggedLabelId] = useState<string | null>(null);
   const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
   const [mouseCoords, setMouseCoords] = useState<{ x: number; y: number } | null>(null);
   const imageRef = useRef<HTMLDivElement>(null);
@@ -124,7 +124,7 @@ export const LearnPage: React.FC = () => {
     setMouseCoords(null);
   };
 
-  const handleRemoveLabel = (labelId: string) => {
+  const _handleRemoveLabel = (labelId: string) => {
     const label = placedLabels.find((p) => p.id === labelId);
     if (label) {
       setPlacedLabels(placedLabels.filter((p) => p.id !== labelId));
