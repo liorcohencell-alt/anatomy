@@ -1,0 +1,95 @@
+.home-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.header p {
+  font-size: 1.2em;
+  color: #666;
+  margin: 0;
+}
+
+.anatomy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.anatomy-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: white;
+}
+
+.anatomy-card:hover {
+  border-color: #0066cc;
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.15);
+  transform: translateY(-4px);
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  text-align: center;
+  width: 100%;
+}
+
+.card-content h2 {
+  font-size: 1.3em;
+  margin: 0 0 5px 0;
+  color: #0066cc;
+}
+
+.card-content p {
+  font-size: 0.9em;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .anatomy-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .header h1 {
+    font-size: 1.8em;
+  }
+}
