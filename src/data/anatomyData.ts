@@ -18,7 +18,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Hand',
     hebName: 'כף יד',
     description: 'The hand is a part of the body consisting of the palm, fingers and thumb.',
-    image: '/images/handClear.jpg',
+    image: '/anatomy/images/handClear.jpg',
     labels: [
       { id: 'distalPhalanx', text: 'Distal Phalanx', x: 70, y: 12 },
       { id: 'dipJoint', text: 'DIP Joint', x: 81, y: 18 },
@@ -42,7 +42,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Foot',
     hebName: 'כף רגל',
     description: 'The foot is the lowest extremity of the leg on which an animal stands when moving about.',
-    image: '/images/foot.svg',
+    image: '/anatomy/images/foot.svg',
     labels: [
       { id: 'heel', text: 'עקב', x: 20, y: 80 },
       { id: 'sole', text: 'כף הרגל', x: 40, y: 60 },
@@ -57,7 +57,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Ribs',
     hebName: 'צלעות',
     description: 'The ribs are long curved bones that form the rib cage.',
-    image: '/images/ribs.svg',
+    image: '/anatomy/images/ribs.svg',
     labels: [
       { id: 'rib1', text: 'צלע ראשונה', x: 50, y: 20 },
       { id: 'rib2', text: 'צלע שנייה', x: 50, y: 30 },
@@ -73,7 +73,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Spine',
     hebName: 'עמוד השדרה',
     description: 'The spine is a series of bones called vertebrae that are connected by ligaments and muscles.',
-    image: '/images/spine.svg',
+    image: '/anatomy/images/spine.svg',
     labels: [
       { id: 'cervical', text: 'שדרות צוואריות', x: 50, y: 15 },
       { id: 'thoracic', text: 'שדרות חזה', x: 50, y: 35 },
@@ -87,7 +87,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Pelvis',
     hebName: 'אגן',
     description: 'The pelvis is a basin-shaped structure made up of bones and joints that connect the spine to the legs.',
-    image: '/images/pelvis.svg',
+    image: '/anatomy/images/pelvis.svg',
     labels: [
       { id: 'ilium', text: 'כנף האגן', x: 35, y: 30 },
       { id: 'pubis', text: 'עצם ההציע', x: 50, y: 60 },
@@ -101,7 +101,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Shoulder',
     hebName: 'שכמה',
     description: 'The shoulder is the joint between the arm and the torso.',
-    image: '/images/shoulder.svg',
+    image: '/anatomy/images/shoulder.svg',
     labels: [
       { id: 'clavicle', text: 'עצם קולר', x: 40, y: 25 },
       { id: 'scapula', text: 'עצם השכמה', x: 55, y: 40 },
@@ -115,7 +115,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Back Muscles',
     hebName: 'שרירי הגב',
     description: 'The back muscles provide support, movement, and stability to the upper body.',
-    image: '/images/back-muscles.svg',
+    image: '/anatomy/images/back-muscles.svg',
     labels: [
       { id: 'trapezius', text: 'שריר טרפז', x: 50, y: 25 },
       { id: 'latissimus', text: 'שריר רחב הגב', x: 50, y: 50 },
@@ -129,7 +129,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Chest Muscles',
     hebName: 'שרירי החזה',
     description: 'The chest muscles support breathing and arm movement.',
-    image: '/images/chest-muscles.svg',
+    image: '/anatomy/images/chest-muscles.svg',
     labels: [
       { id: 'pectoralis', text: 'שריר חזה גדול', x: 45, y: 40 },
       { id: 'intercostal', text: 'שרירים בין-צלעיים', x: 50, y: 50 },
