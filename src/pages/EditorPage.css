@@ -335,3 +335,152 @@
     min-width: 100px;
   }
 }
+
+/* New styles for image upload and word management */
+.section-block {
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.section-block h2 {
+  font-size: 1em;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.upload-btn,
+.add-word-btn {
+  width: 100%;
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95em;
+  font-weight: 600;
+  transition: background 0.3s;
+  margin-bottom: 8px;
+}
+
+.upload-btn:hover,
+.add-word-btn:hover {
+  background: #0052a3;
+}
+
+.upload-success {
+  color: #28a745;
+  font-size: 0.9em;
+  margin: 0;
+  padding: 5px 0;
+  font-weight: 500;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+.label-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.label-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.label-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 4px 8px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background 0.3s;
+}
+
+.edit-btn:hover {
+  background: #fff3cd;
+}
+
+.delete-btn:hover {
+  background: #f8d7da;
+}
+
+.edit-label-inline {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+}
+
+.inline-input {
+  flex: 1;
+  padding: 6px;
+  border: 1px solid #0066cc;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-family: inherit;
+}
+
+.inline-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+.save-inline-btn,
+.cancel-inline-btn {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.save-inline-btn {
+  background: #28a745;
+  color: white;
+}
+
+.save-inline-btn:hover {
+  background: #218838;
+}
+
+.cancel-inline-btn {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel-inline-btn:hover {
+  background: #c82333;
+}

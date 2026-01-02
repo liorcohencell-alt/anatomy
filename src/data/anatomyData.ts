@@ -42,14 +42,22 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Foot',
     hebName: 'כף רגל',
     description: 'The foot is the lowest extremity of the leg on which an animal stands when moving about.',
-    image: '/anatomy/images/foot.svg',
+    image: '/anatomy/images/footclear.jpg',
     labels: [
-      { id: 'heel', text: 'עקב', x: 20, y: 80 },
-      { id: 'sole', text: 'כף הרגל', x: 40, y: 60 },
-      { id: 'ball', text: 'כדור הרגל', x: 40, y: 40 },
-      { id: 'bigtoe', text: 'אצבע גדולה', x: 30, y: 15 },
-      { id: 'toes', text: 'אצבעות', x: 50, y: 20 },
-      { id: 'arch', text: 'קשת הרגל', x: 25, y: 50 }
+      { id: 'hallux', text: 'Hallux', x: 25, y: 15 },
+      { id: 'phalanges', text: 'Phalanges', x: 40, y: 20 },
+      { id: 'distal', text: 'Distal', x: 50, y: 25 },
+      { id: 'middle', text: 'Middle', x: 50, y: 35 },
+      { id: 'proximal', text: 'Proximal', x: 50, y: 45 },
+      { id: 'metatarsals', text: 'Metatarsals', x: 45, y: 55 },
+      { id: 'tarsals', text: 'Tarsals', x: 40, y: 65 },
+      { id: 'medialCuneiform', text: 'Medial cuneiform', x: 30, y: 70 },
+      { id: 'intermediateCuneiform', text: 'Intermediate cuneiform', x: 40, y: 70 },
+      { id: 'navicular', text: 'Navicular', x: 50, y: 70 },
+      { id: 'lateralCuneiform', text: 'Lateral cuneiform', x: 60, y: 70 },
+      { id: 'cuboid', text: 'Cuboid', x: 65, y: 65 },
+      { id: 'talus', text: 'Talus', x: 50, y: 80 },
+      { id: 'calcaneus', text: 'Calcaneus', x: 30, y: 85 }
     ]
   },
   {
@@ -135,6 +143,23 @@ export const anatomyItems: AnatomyItem[] = [
       { id: 'intercostal', text: 'שרירים בין-צלעיים', x: 50, y: 50 },
       { id: 'serratus2', text: 'שריר מסור קדמי', x: 60, y: 45 },
       { id: 'subclavius', text: 'שריר תחת קולר', x: 50, y: 25 }
+    ]
+  },
+  {
+    id: 'positions',
+    name: 'Positions',
+    hebName: 'תנוחות',
+    description: 'Anatomical positions used to describe the location and orientation of body parts.',
+    image: '/anatomy/images/positionsClear.jpg',
+    labels: [
+      { id: 'superior', text: 'Superior, Cranial', x: 62, y: 5 },
+      { id: 'inferior', text: 'Inferior, Caudal', x: 37, y: 90 },
+      { id: 'ventral', text: 'Ventral, Anterior', x: 18, y: 32 },
+      { id: 'posterior', text: 'Posterior, Dorsal', x: 80, y: 18 },
+      { id: 'medial', text: 'Medial', x: 31, y: 42 },
+      { id: 'lateral', text: 'Lateral', x: 35, y: 48 },
+      { id: 'proximal', text: 'Proximal', x: 74, y: 31 },
+      { id: 'distal', text: 'Distal', x: 73, y: 51 }
     ]
   }
 ];
