@@ -34,18 +34,41 @@ export const EditorPage: React.FC = () => {
   const [editingLabelId, setEditingLabelId] = useState<string | null>(null);
   const [editingLabelText, setEditingLabelText] = useState('');
 
-  // Load saved coordinates from localStorage on mount
+  // Load saved coordinates from server or localStorage on mount
   useEffect(() => {
     if (anatomyId) {
-      const savedData = localStorage.getItem(`anatomy-${anatomyId}`);
-      if (savedData) {
-        try {
-          const parsedData = JSON.parse(savedData);
-          setLabels(parsedData);
-        } catch (error) {
-          console.error('Failed to load saved data:', error);
-        }
-      }
+      // Try to load from backend server first
+      fetch(`http://localhost:5174/api/load/${anatomyId}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.success && data.data) {
+            setLabels(data.data);
+          } else {
+            // Fallback to localStorage
+            const savedData = localStorage.getItem(`anatomy-${anatomyId}`);
+            if (savedData) {
+              try {
+                const parsedData = JSON.parse(savedData);
+                setLabels(parsedData);
+              } catch (error) {
+                console.error('Failed to load saved data:', error);
+              }
+            }
+          }
+        })
+        .catch(error => {
+          console.warn('Backend server not available, checking localStorage:', error);
+          // Fallback to localStorage if server is not running
+          const savedData = localStorage.getItem(`anatomy-${anatomyId}`);
+          if (savedData) {
+            try {
+              const parsedData = JSON.parse(savedData);
+              setLabels(parsedData);
+            } catch (error) {
+              console.error('Failed to load saved data:', error);
+            }
+          }
+        });
     }
   }, [anatomyId]);
 
@@ -115,7 +138,7 @@ export const EditorPage: React.FC = () => {
     setDraggingId(null);
   };
 
-  const handleSave = () => {
+  const handleSave = async () => {
     const labelsData = labels.map((l) => ({
       id: l.id,
       text: l.text,
@@ -123,15 +146,34 @@ export const EditorPage: React.FC = () => {
       y: Math.round(l.y),
     }));
 
-    // Save to localStorage
-    localStorage.setItem(
-      `anatomy-${anatomyId}`,
-      JSON.stringify(labelsData)
-    );
+    try {
+      // Try to save to backend server
+      const response = await fetch(`http://localhost:5174/api/save/${anatomyId}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(labelsData),
+      });
 
-    // Show success message
-    setSavedMessage(true);
-    setTimeout(() => setSavedMessage(false), 3000);
+      if (response.ok) {
+        // Show success message
+        setSavedMessage(true);
+        setTimeout(() => setSavedMessage(false), 3000);
+        console.log('Data saved to server successfully');
+      } else {
+        throw new Error('Server response was not ok');
+      }
+    } catch (error) {
+      console.warn('Backend server not available, saving to localStorage instead:', error);
+      // Fallback to localStorage if server is not running
+      localStorage.setItem(
+        `anatomy-${anatomyId}`,
+        JSON.stringify(labelsData)
+      );
+      setSavedMessage(true);
+      setTimeout(() => setSavedMessage(false), 3000);
+    }
   };
 
   const handleReset = () => {
