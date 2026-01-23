@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getAnatomyItemById } from '../data/anatomyData';
 import './LearnPage.css';
@@ -20,18 +20,18 @@ export const LearnPage: React.FC = () => {
   const navigate = useNavigate();
   const item = anatomyId ? getAnatomyItemById(anatomyId) : null;
 
-  // Load saved label positions from localStorage
-  const getSavedLabels = () => {
-    try {
-      const saved = localStorage.getItem(`anatomy-${anatomyId}`);
-      if (saved) {
-        return JSON.parse(saved);
-      }
-    } catch (e) {
-      console.error('Error loading saved labels:', e);
-    }
-    return item?.labels || [];
-  };
+  const [correctLabels, setCorrectLabels] = useState(item?.labels || []);
+  const [draggedLabel, setDraggedLabel] = useState<DraggedLabel | null>(null);
+  const [placedLabels, setPlacedLabels] = useState<
+    { id: string; x: number; y: number; text: string }[]
+  >([]);
+  const [_draggedLabelId, _setDraggedLabelId] = useState<string | null>(null);
+  const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
+  const [mouseCoords, setMouseCoords] = useState<{ x: number; y: number } | null>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+  const [availableLabels, setAvailableLabels] = useState(
+    item?.labels.map((l) => ({ id: l.id, text: l.text })) || []
+  );
 
   // Randomize array function
   const randomizeArray = (arr: any[]) => {
@@ -43,19 +43,73 @@ export const LearnPage: React.FC = () => {
     return shuffled;
   };
 
-    const correctLabels = getSavedLabels();
+  // Load saved label positions from server on component mount
+  useEffect(() => {
+    if (anatomyId) {
+      // Try to load from backend server first
+      fetch(`http://localhost:5174/api/load/${anatomyId}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.success && data.data) {
+            console.log('Loaded labels from server:', data.data);
+            setCorrectLabels(data.data);
+          } else {
+            // Fallback to localStorage
+            try {
+              const saved = localStorage.getItem(`anatomy-${anatomyId}`);
+              if (saved) {
+                const parsedData = JSON.parse(saved);
+                console.log('Loaded labels from localStorage:', parsedData);
+                setCorrectLabels(parsedData);
+              }
+            } catch (e) {
+              console.error('Error loading saved labels:', e);
+            }
+          }
+        })
+        .catch(error => {
+          console.warn('Backend server not available, checking localStorage:', error);
+          // Fallback to localStorage if server is not running
+          try {
+            const saved = localStorage.getItem(`anatomy-${anatomyId}`);
+            if (saved) {
+              const parsedData = JSON.parse(saved);
+              console.log('Loaded labels from localStorage:', parsedData);
+              setCorrectLabels(parsedData);
+            }
+          } catch (e) {
+            console.error('Error loading saved labels:', e);
+          }
+        });
+    }
+  }, [anatomyId]);
 
-  const [draggedLabel, setDraggedLabel] = useState<DraggedLabel | null>(null);
-  const [placedLabels, setPlacedLabels] = useState<
-    { id: string; x: number; y: number; text: string }[]
-  >([]);
-  const [availableLabels, setAvailableLabels] = useState(
-    randomizeArray(item?.labels.map((l) => ({ id: l.id, text: l.text })) || [])
-  );
-  const [_draggedLabelId, _setDraggedLabelId] = useState<string | null>(null);
-  const [scoreResult, setScoreResult] = useState<ScoreResult | null>(null);
-  const [mouseCoords, setMouseCoords] = useState<{ x: number; y: number } | null>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
+  // Update available labels when correct labels change
+  useEffect(() => {
+    setAvailableLabels(
+      randomizeArray(correctLabels.map((l) => ({ id: l.id, text: l.text })))
+    );
+  }, [correctLabels]);
+
+  // Function to refresh the correct labels from server
+  const handleRefreshLabels = () => {
+    if (anatomyId) {
+      fetch(`http://localhost:5174/api/load/${anatomyId}`)
+        .then(response => response.json())
+        .then(data => {
+          if (data.success && data.data) {
+            console.log('Refreshed labels from server:', data.data);
+            setCorrectLabels(data.data);
+          } else {
+            alert('No saved data found. Using default positions.');
+          }
+        })
+        .catch(error => {
+          console.warn('Failed to refresh:', error);
+          alert('Could not refresh. Backend server may not be running.');
+        });
+    }
+  };
 
   if (!item) {
     return (
@@ -177,6 +231,9 @@ export const LearnPage: React.FC = () => {
           ← Back
         </button>
         <h1>{item.name}</h1>
+        <button onClick={handleRefreshLabels} className="editor-btn" title="Refresh saved positions">
+          ↻ Refresh
+        </button>
         <button onClick={() => navigate(`/editor/${anatomyId}`)} className="editor-btn" title="Edit label positions">
           ✎ Edit
         </button>
@@ -202,7 +259,7 @@ export const LearnPage: React.FC = () => {
           />
 
           {/* Render target circles for correct positions */}
-          {item.labels.map((label) => (
+          {correctLabels.map((label) => (
             <div
               key={`target-${label.id}`}
               className="target-circle"

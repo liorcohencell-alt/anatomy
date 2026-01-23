@@ -1,7 +1,11 @@
 .learn-page {
   padding: 20px;
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .learn-page.error {
@@ -66,9 +70,10 @@
 
 .learn-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 300px;
   gap: 20px;
-  max-width: 900px;
+  flex: 1;
+  overflow: hidden;
 }
 
 .image-container {
@@ -84,9 +89,8 @@
   cursor: grab;
   user-select: none;
   pointer-events: auto;
-  max-width: 600px;
   width: 100%;
-  margin: 0 auto;
+  height: 100%;
 }
 
 .image-container:active {
@@ -197,16 +201,13 @@
   border: 2px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  height: fit-content;
-  position: fixed;
-  right: 20px;
-  top: 20px;
-  width: 350px;
-  max-height: 85vh;
-  overflow-y: auto;
+  height: 100%;
+  position: relative;
+  width: 100%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 50;
   pointer-events: auto;
+  overflow-y: auto;
 }
 
 .labels-panel h2 {
