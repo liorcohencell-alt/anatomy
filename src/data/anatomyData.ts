@@ -125,11 +125,11 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The back muscles provide support, movement, and stability to the upper body.',
     image: '/anatomy/images/backMuscles.jpg',
     labels: [
-      { id: 'trapezius', text: 'Trapezius', x: 7, y: 43 },
-      { id: 'latissimus', text: 'Latissimus dorsi', x: 37, y: 56 },
-      { id: 'rhomboid', text: 'Rhomboids (minor+major)', x: 36, y: 47 },
-      { id: 'erector', text: 'Erector spine', x: 70, y: 49 },
-      { id: 'quadratus', text: 'Quadratus lumborum', x: 93, y: 61 }
+      { id: 'trapezius', text: 'Trapezius', x: 6, y: 28 },
+      { id: 'latissimus', text: 'Latissimus dorsi', x: 36, y: 56 },
+      { id: 'rhomboid', text: 'Rhomboids (minor+major)', x: 34, y: 39 },
+      { id: 'erector', text: 'Erector spine', x: 70, y: 42 },
+      { id: 'quadratus', text: 'Quadratus lumborum', x: 94, y: 73 }
     ]
   },
   {
@@ -139,8 +139,8 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The chest muscles support breathing and arm movement.',
     image: '/anatomy/images/chestMuscles.jpg',
     labels: [
-      { id: 'pectoralis', text: 'Pectoralis major', x: 45, y: 40 },
-      { id: 'serratus', text: 'Serratus anterior', x: 60, y: 45 }
+      { id: 'pectoralis', text: 'Pectoralis major', x: 63, y: 29 },
+      { id: 'serratus', text: 'Serratus anterior', x: 39, y: 92 }
     ]
   },
   {
