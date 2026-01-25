@@ -148,7 +148,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Abdominal Muscles',
     hebName: 'שרירי הבטן',
     description: 'The abdominal muscles support the trunk and help with movement and breathing.',
-    image: '/anatomy/images/abdominal-muscles.svg',
+    image: '/anatomy/images/abdominalMuscles.jpg',
     labels: [
       { id: 'rectus', text: 'Rectus Abdominis', x: 50, y: 40 },
       { id: 'externalOblique', text: 'Abdominal External Oblique', x: 45, y: 35 },
@@ -161,7 +161,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Shoulder Muscles',
     hebName: 'שרירי כתף',
     description: 'The shoulder muscles provide movement and stability to the shoulder joint.',
-    image: '/anatomy/images/shoulder-muscles.svg',
+    image: '/anatomy/images/shoulderMuscles.jpg',
     labels: [
       { id: 'deltoid', text: 'Deltoid', x: 50, y: 30 },
       { id: 'supraspinatus', text: 'Supraspinatus', x: 45, y: 25 },
@@ -174,7 +174,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Arm Muscles',
     hebName: 'שרירי הזרוע',
     description: 'The arm muscles enable flexion and extension of the arm.',
-    image: '/anatomy/images/arm-muscles.svg',
+    image: '/anatomy/images/armMuscles.jpg',
     labels: [
       { id: 'biceps', text: 'Biceps Brachi', x: 45, y: 40 },
       { id: 'brachialis', text: 'Brachialis', x: 50, y: 45 },
@@ -198,7 +198,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Anterior Forearm Muscles',
     hebName: 'שרירי האמה מדור אנטריורי',
     description: 'The anterior forearm muscles flex the wrist and fingers.',
-    image: '/anatomy/images/forearm-anterior-muscles.svg',
+    image: '/anatomy/images/forearmAnteriorMuscles.jpg',
     labels: [
       { id: 'brachioRadialis', text: 'Brachio radialis', x: 50, y: 30 },
       { id: 'flexorCarpiRadialis', text: 'Flexor carpi radialis', x: 45, y: 40 },
@@ -213,7 +213,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Thumb Muscles',
     hebName: 'שרירים מניעי אגודל',
     description: 'The thumb muscles enable movement and opposition of the thumb.',
-    image: '/anatomy/images/thenar-muscles.svg',
+    image: '/anatomy/images/thenarMuscles.jpg',
     labels: [
       { id: 'extensorPollicisLongus', text: 'Extensor pollicis longus', x: 50, y: 35 },
       { id: 'extensorPollicisBrevis', text: 'Extensor pollicis brevis', x: 50, y: 40 },
@@ -249,7 +249,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Medial Thigh Muscles',
     hebName: 'שרירי ירך מדיאלי',
     description: 'The medial thigh muscles adduct the hip.',
-    image: '/anatomy/images/medial-thigh-muscles.svg',
+    image: '/anatomy/images/medialThighMuscles.jpg',
     labels: [
       { id: 'gracilis', text: 'Gracilis', x: 48, y: 40 },
       { id: 'adductorMagnus', text: 'Adductor magnus', x: 50, y: 45 }
@@ -260,7 +260,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Posterior Thigh Muscles',
     hebName: 'שרירי ירך פוסטריורי',
     description: 'The posterior thigh muscles flex the knee and extend the hip.',
-    image: '/anatomy/images/posterior-thigh-muscles.svg',
+    image: '/anatomy/images/posteriorThighMuscles.jpg',
     labels: [
       { id: 'bicepsFemoris', text: 'Biceps femoris', x: 50, y: 35 },
       { id: 'semitendinosus', text: 'Semitendinosus', x: 50, y: 40 },
@@ -272,7 +272,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Anterior Leg Muscles',
     hebName: 'שרירי שוק אנטריורי',
     description: 'The anterior leg muscles dorsiflex the ankle and extend the toes.',
-    image: '/anatomy/images/anterior-leg-muscles.svg',
+    image: '/anatomy/images/anteriorLegMuscles.jpg',
     labels: [
       { id: 'tibialisAnterior', text: 'Tibialis anterior', x: 50, y: 35 },
       { id: 'extensorHallucisLongus', text: 'Extensor hallucis longus', x: 45, y: 40 },
@@ -284,10 +284,10 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Lateral Leg Muscles',
     hebName: 'שרירי השוק לטרלי',
     description: 'The lateral leg muscles evert the ankle.',
-    image: '/anatomy/images/lateral-leg-muscles.svg',
+    image: '/anatomy/images/lateralLegMuscles.jpg',
     labels: [
-      { id: 'fibularisLongus', text: 'Fibularis longus', x: 50, y: 40 },
-      { id: 'fibularisBrevis', text: 'Fibularis brevis', x: 50, y: 45 }
+      { id: 'fibularisLongus', text: 'Fibularis/Peroneus longus', x: 50, y: 40 },
+      { id: 'fibularisBrevis', text: 'Fibularis/Peroneus brevis', x: 50, y: 45 }
     ]
   },
   {
@@ -295,7 +295,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Posterior Leg Muscles',
     hebName: 'שרירי שוק פוסטריורי',
     description: 'The posterior leg muscles plantar flex the ankle.',
-    image: '/anatomy/images/posterior-leg-muscles.svg',
+    image: '/anatomy/images/posteriorLegMuscles.jpg',
     labels: [
       { id: 'gastrocnemius', text: 'Gastrocnemius', x: 50, y: 35 },
       { id: 'soleus', text: 'Soleus', x: 50, y: 40 },
@@ -307,7 +307,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Neck Muscles',
     hebName: 'שרירי צוואר',
     description: 'The neck muscles support the head and enable neck movement.',
-    image: '/anatomy/images/neck-muscles.svg',
+    image: '/anatomy/images/neckMuscles.jpg',
     labels: [
       { id: 'sternocleidomastoid', text: 'Sterno cleido mastoid', x: 50, y: 40 }
     ]
@@ -317,7 +317,7 @@ export const anatomyItems: AnatomyItem[] = [
     name: 'Back Neck Muscles',
     hebName: 'שרירי העורף',
     description: 'The back neck muscles support the head and enable neck extension.',
-    image: '/anatomy/images/neck-back-muscles.svg',
+    image: '/anatomy/images/neckBackMuscles.jpg',
     labels: [
       { id: 'spleniiCapitis', text: 'splenius capitis', x: 50, y: 35 },
       { id: 'semispinalisCapitis', text: 'Semispinalis capitis', x: 50, y: 40 },
