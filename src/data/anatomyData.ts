@@ -150,10 +150,10 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The abdominal muscles support the trunk and help with movement and breathing.',
     image: '/anatomy/images/abdominalMuscles.jpg',
     labels: [
-      { id: 'rectus', text: 'Rectus Abdominis', x: 50, y: 40 },
-      { id: 'externalOblique', text: 'Abdominal External Oblique', x: 45, y: 35 },
-      { id: 'internalOblique', text: 'Abdominal Internal Oblique', x: 45, y: 38 },
-      { id: 'transverse', text: 'Transverse Abdominal', x: 50, y: 50 }
+      { id: 'rectus', text: 'Rectus Abdominis', x: 66, y: 28 },
+      { id: 'externalOblique', text: 'Abdominal External Oblique', x: 69, y: 64 },
+      { id: 'internalOblique', text: 'Abdominal Internal Oblique', x: 68, y: 52 },
+      { id: 'transverse', text: 'Transverse Abdominal', x: 67, y: 41 }
     ]
   },
   {
@@ -163,10 +163,10 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The shoulder muscles provide movement and stability to the shoulder joint.',
     image: '/anatomy/images/shoulderMuscles.jpg',
     labels: [
-      { id: 'deltoid', text: 'Deltoid', x: 50, y: 30 },
-      { id: 'supraspinatus', text: 'Supraspinatus', x: 45, y: 25 },
-      { id: 'infraspinatus', text: 'Infraspinatus', x: 55, y: 35 },
-      { id: 'teresMinor', text: 'Teres Minor', x: 60, y: 32 }
+      { id: 'deltoid', text: 'Deltoid', x: 8, y: 36 },
+      { id: 'supraspinatus', text: 'Supraspinatus', x: 67, y: 35 },
+      { id: 'infraspinatus', text: 'Infraspinatus', x: 65, y: 50 },
+      { id: 'teresMinor', text: 'Teres Minor', x: 84, y: 49 }
     ]
   },
   {
@@ -176,9 +176,9 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The arm muscles enable flexion and extension of the arm.',
     image: '/anatomy/images/armMuscles.jpg',
     labels: [
-      { id: 'biceps', text: 'Biceps Brachi', x: 45, y: 40 },
-      { id: 'brachialis', text: 'Brachialis', x: 50, y: 45 },
-      { id: 'triceps', text: 'Triceps', x: 55, y: 40 }
+      { id: 'biceps', text: 'Biceps Brachi', x: 30, y: 37 },
+      { id: 'brachialis', text: 'Brachialis', x: 46, y: 76 },
+      { id: 'triceps', text: 'Triceps', x: 70, y: 60 }
     ]
   },
   {
@@ -200,12 +200,12 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The anterior forearm muscles flex the wrist and fingers.',
     image: '/anatomy/images/forearmAnteriorMuscles.jpg',
     labels: [
-      { id: 'brachioRadialis', text: 'Brachio radialis', x: 50, y: 30 },
-      { id: 'flexorCarpiRadialis', text: 'Flexor carpi radialis', x: 45, y: 40 },
-      { id: 'palmaris', text: 'Palmaris longus', x: 50, y: 42 },
-      { id: 'flexorCarpiUlnaris', text: 'Flexor carpi ulnaris', x: 55, y: 40 },
-      { id: 'flexorDigitorumSuperficialis', text: 'Flexor digitorum superficialis', x: 50, y: 48 },
-      { id: 'flexorDigitorumProfundus', text: 'Flexor digitorum profundus', x: 50, y: 52 }
+      { id: 'brachioRadialis', text: 'Brachio radialis', x: 20, y: 25 },
+      { id: 'flexorCarpiRadialis', text: 'Flexor carpi radialis', x: 11, y: 39 },
+      { id: 'palmaris', text: 'Palmaris longus', x: 20, y: 45 },
+      { id: 'flexorCarpiUlnaris', text: 'Flexor carpi ulnaris', x: 9, y: 51 },
+      { id: 'flexorDigitorumSuperficialis', text: 'Flexor digitorum superficialis', x: 60, y: 41 },
+      { id: 'flexorDigitorumProfundus', text: 'Flexor digitorum profundus', x: 85, y: 50 }
     ]
   },
   {
@@ -215,9 +215,9 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The thumb muscles enable movement and opposition of the thumb.',
     image: '/anatomy/images/thenarMuscles.jpg',
     labels: [
-      { id: 'extensorPollicisLongus', text: 'Extensor pollicis longus', x: 50, y: 35 },
-      { id: 'extensorPollicisBrevis', text: 'Extensor pollicis brevis', x: 50, y: 40 },
-      { id: 'abductorPollicisLongus', text: 'Abductor pollicis longus', x: 50, y: 45 }
+      { id: 'extensorPollicisLongus', text: 'Extensor pollicis longus', x: 31, y: 39 },
+      { id: 'extensorPollicisBrevis', text: 'Extensor pollicis brevis', x: 55, y: 56 },
+      { id: 'abductorPollicisLongus', text: 'Abductor pollicis longus', x: 56, y: 28 }
     ]
   },
   {
@@ -251,8 +251,8 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The medial thigh muscles adduct the hip.',
     image: '/anatomy/images/medialThighMuscles.jpg',
     labels: [
-      { id: 'gracilis', text: 'Gracilis', x: 48, y: 40 },
-      { id: 'adductorMagnus', text: 'Adductor magnus', x: 50, y: 45 }
+      { id: 'gracilis', text: 'Gracilis', x: 42, y: 60 },
+      { id: 'adductorMagnus', text: 'Adductor magnus', x: 43, y: 32 }
     ]
   },
   {
@@ -262,9 +262,9 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The posterior thigh muscles flex the knee and extend the hip.',
     image: '/anatomy/images/posteriorThighMuscles.jpg',
     labels: [
-      { id: 'bicepsFemoris', text: 'Biceps femoris', x: 50, y: 35 },
-      { id: 'semitendinosus', text: 'Semitendinosus', x: 50, y: 40 },
-      { id: 'semimembranosus', text: 'Semimembranosus', x: 50, y: 45 }
+      { id: 'bicepsFemoris', text: 'Biceps femoris', x: 71, y: 78 },
+      { id: 'semitendinosus', text: 'Semitendinosus', x: 70, y: 41 },
+      { id: 'semimembranosus', text: 'Semimembranosus', x: 31, y: 37 }
     ]
   },
   {
@@ -274,9 +274,9 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The anterior leg muscles dorsiflex the ankle and extend the toes.',
     image: '/anatomy/images/anteriorLegMuscles.jpg',
     labels: [
-      { id: 'tibialisAnterior', text: 'Tibialis anterior', x: 50, y: 35 },
-      { id: 'extensorHallucisLongus', text: 'Extensor hallucis longus', x: 45, y: 40 },
-      { id: 'extensorDigitorumLongus', text: 'Extensor Digitorum Longus', x: 50, y: 45 }
+      { id: 'tibialisAnterior', text: 'Tibialis anterior', x: 38, y: 56 },
+      { id: 'extensorHallucisLongus', text: 'Extensor hallucis longus', x: 56, y: 58 },
+      { id: 'extensorDigitorumLongus', text: 'Extensor Digitorum Longus', x: 74, y: 58 }
     ]
   },
   {
@@ -286,8 +286,8 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The lateral leg muscles evert the ankle.',
     image: '/anatomy/images/lateralLegMuscles.jpg',
     labels: [
-      { id: 'fibularisLongus', text: 'Fibularis/Peroneus longus', x: 50, y: 40 },
-      { id: 'fibularisBrevis', text: 'Fibularis/Peroneus brevis', x: 50, y: 45 }
+      { id: 'fibularisLongus', text: 'Fibularis longus', x: 40, y: 47 },
+      { id: 'fibularisBrevis', text: 'Fibularis brevis', x: 48, y: 59 }
     ]
   },
   {
@@ -297,9 +297,9 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The posterior leg muscles plantar flex the ankle.',
     image: '/anatomy/images/posteriorLegMuscles.jpg',
     labels: [
-      { id: 'gastrocnemius', text: 'Gastrocnemius', x: 50, y: 35 },
-      { id: 'soleus', text: 'Soleus', x: 50, y: 40 },
-      { id: 'tibialisPosterior', text: 'Tibialis Posterior', x: 50, y: 45 }
+      { id: 'gastrocnemius', text: 'Gastrocnemius', x: 25, y: 38 },
+      { id: 'soleus', text: 'Soleus', x: 17, y: 65 },
+      { id: 'tibialisPosterior', text: 'Tibialis Posterior', x: 56, y: 48 }
     ]
   },
   {
@@ -309,7 +309,9 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The neck muscles support the head and enable neck movement.',
     image: '/anatomy/images/neckMuscles.jpg',
     labels: [
-      { id: 'sternocleidomastoid', text: 'Sterno cleido mastoid', x: 50, y: 40 }
+      { id: 'sternocleidomastoid', text: 'Sterno cleido mastoid', x: 72, y: 83 },
+      { id: '11', text: 'Temporalis', x: 71, y: 17 },
+      { id: '12', text: 'Masseter', x: 71, y: 28 }
     ]
   },
   {
@@ -319,9 +321,9 @@ export const anatomyItems: AnatomyItem[] = [
     description: 'The back neck muscles support the head and enable neck extension.',
     image: '/anatomy/images/neckBackMuscles.jpg',
     labels: [
-      { id: 'spleniiCapitis', text: 'splenius capitis', x: 50, y: 35 },
-      { id: 'semispinalisCapitis', text: 'Semispinalis capitis', x: 50, y: 40 },
-      { id: 'rectusCapitis', text: 'Rectus capitis', x: 50, y: 45 }
+      { id: 'spleniiCapitis', text: 'splenius capitis', x: 12, y: 63 },
+      { id: 'semispinalisCapitis', text: 'Semispinalis capitis', x: 12, y: 38 },
+      { id: 'rectusCapitis', text: 'Rectus capitis', x: 82, y: 47 }
     ]
   },
   {
