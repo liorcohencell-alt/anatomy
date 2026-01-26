@@ -140,7 +140,7 @@ export const anatomyItems: AnatomyItem[] = [
     image: '/anatomy/images/chestMuscles.jpg',
     labels: [
       { id: 'pectoralis', text: 'Pectoralis major', x: 63, y: 29 },
-      { id: 'serratus', text: 'Serratus anterior', x: 39, y: 92 }
+      { id: 'serratus', text: 'Serratus anterior', x: 60, y: 89 }
     ]
   },
   {
